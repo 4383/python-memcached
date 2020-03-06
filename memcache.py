@@ -1014,6 +1014,9 @@ class Client(threading.local):
         if self.do_check_key:
             self.check_key(key)
         server, key = self._get_server(key)
+        print("python-memcached debug")
+        print("python-memcached server: {}".format(server))
+        print("python-memcached key: {}".format(key))
         if not server:
             return 0
 
